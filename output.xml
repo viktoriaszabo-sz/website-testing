@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231003 09:17:21.483" rpa="false" schemaversion="4">
+<suite id="s1" name="Stproject" source="c:\Users\keita\Year2_semestrer1\website-testing\stproject.robot">
+<test id="s1-t1" name="Website testing" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.jimms.fi/</arg>
+<arg>Chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231003 09:17:21.658" level="INFO">Opening browser 'Chrome' to base url 'https://www.jimms.fi/'.</msg>
+<status status="PASS" starttime="20231003 09:17:21.658" endtime="20231003 09:17:24.213"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231003 09:17:24.213" endtime="20231003 09:17:24.410"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${Count}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[*]/a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231003 09:17:24.411" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20231003 09:17:24.449" level="INFO">${Count} = 10</msg>
+<status status="PASS" starttime="20231003 09:17:24.411" endtime="20231003 09:17:24.450"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[index]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 09:17:24.834" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231003 09:17:24.834" level="FAIL">Element with locator 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[index]/a' not found.</msg>
+<status status="FAIL" starttime="20231003 09:17:24.452" endtime="20231003 09:17:24.837"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231003 09:17:24.838" endtime="20231003 09:17:24.838"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>${Count}</value>
+<iter>
+<var name="${index}"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231003 09:17:24.840" endtime="20231003 09:17:24.840"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${referenceName}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231003 09:17:24.840" endtime="20231003 09:17:24.840"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${testName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231003 09:17:24.841" endtime="20231003 09:17:24.841"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231003 09:17:24.841" endtime="20231003 09:17:24.841"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${referenceName}</arg>
+<arg>${testName}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231003 09:17:24.841" endtime="20231003 09:17:24.841"/>
+</kw>
+<status status="NOT RUN" starttime="20231003 09:17:24.840" endtime="20231003 09:17:24.841"/>
+</iter>
+<status status="NOT RUN" starttime="20231003 09:17:24.839" endtime="20231003 09:17:24.841"/>
+</for>
+<status status="FAIL" starttime="20231003 09:17:21.658" endtime="20231003 09:17:24.841">Element with locator 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[index]/a' not found.</status>
+</test>
+<status status="FAIL" starttime="20231003 09:17:21.486" endtime="20231003 09:17:24.841"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Stproject">Stproject</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231003 09:17:24.411" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+</errors>
+</robot>
