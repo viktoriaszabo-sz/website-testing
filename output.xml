@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231003 09:17:21.483" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231003 17:48:02.806" rpa="false" schemaversion="4">
 <suite id="s1" name="Stproject" source="c:\Users\keita\Year2_semestrer1\website-testing\stproject.robot">
 <test id="s1-t1" name="Website testing" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -7,73 +7,482 @@
 <arg>Chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231003 09:17:21.658" level="INFO">Opening browser 'Chrome' to base url 'https://www.jimms.fi/'.</msg>
-<status status="PASS" starttime="20231003 09:17:21.658" endtime="20231003 09:17:24.213"/>
+<msg timestamp="20231003 17:48:03.065" level="INFO">Opening browser 'Chrome' to base url 'https://www.jimms.fi/'.</msg>
+<status status="PASS" starttime="20231003 17:48:03.064" endtime="20231003 17:48:09.120"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231003 09:17:24.213" endtime="20231003 09:17:24.410"/>
+<status status="PASS" starttime="20231003 17:48:09.120" endtime="20231003 17:48:09.521"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20231003 17:48:09.521" endtime="20231003 17:48:10.548"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:12.551" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231003 17:48:10.550" endtime="20231003 17:48:12.551"/>
 </kw>
 <kw name="Get Element Count" library="SeleniumLibrary">
 <var>${Count}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[*]/a</arg>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[*]</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20231003 09:17:24.411" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
-<msg timestamp="20231003 09:17:24.449" level="INFO">${Count} = 10</msg>
-<status status="PASS" starttime="20231003 09:17:24.411" endtime="20231003 09:17:24.450"/>
+<msg timestamp="20231003 17:48:12.551" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20231003 17:48:12.596" level="INFO">${Count} = 10</msg>
+<status status="PASS" starttime="20231003 17:48:12.551" endtime="20231003 17:48:12.596"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[index]/a</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231003 09:17:24.834" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231003 09:17:24.834" level="FAIL">Element with locator 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[index]/a' not found.</msg>
-<status status="FAIL" starttime="20231003 09:17:24.452" endtime="20231003 09:17:24.837"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231003 09:17:24.838" endtime="20231003 09:17:24.838"/>
+<kw name="Get Vertical Position" library="SeleniumLibrary">
+<var>${refrencePosition}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]</arg>
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:12.654" level="INFO">${refrencePosition} = 99</msg>
+<status status="PASS" starttime="20231003 17:48:12.596" endtime="20231003 17:48:12.654"/>
 </kw>
 <for flavor="IN RANGE">
 <var>${index}</var>
-<value>${Count}</value>
+<value>1</value>
+<value>${Count}+1</value>
 <iter>
-<var name="${index}"/>
+<var name="${index}">1</var>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231003 09:17:24.840" endtime="20231003 09:17:24.840"/>
+<msg timestamp="20231003 17:48:13.661" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:12.660" endtime="20231003 17:48:13.662"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${referenceName}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231003 09:17:24.840" endtime="20231003 09:17:24.840"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${testName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:13.663" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]</msg>
+<status status="PASS" starttime="20231003 17:48:13.662" endtime="20231003 17:48:13.663"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${testName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<var>${receivedName}</var>
+<arg>${testName}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231003 09:17:24.841" endtime="20231003 09:17:24.841"/>
+<msg timestamp="20231003 17:48:13.728" level="INFO">${receivedName} = Tietokoneet</msg>
+<status status="PASS" starttime="20231003 17:48:13.663" endtime="20231003 17:48:13.728"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${testName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:13.728" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]'.</msg>
+<status status="PASS" starttime="20231003 17:48:13.728" endtime="20231003 17:48:16.395"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:17.395" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:16.395" endtime="20231003 17:48:17.395"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:17.395" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
+<status status="PASS" starttime="20231003 17:48:17.395" endtime="20231003 17:48:17.395"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceReceived}</var>
+<arg>${referenceName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:17.452" level="INFO">${referenceReceived} = Tietokoneet</msg>
+<status status="PASS" starttime="20231003 17:48:17.398" endtime="20231003 17:48:17.452"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${index}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20231003 09:17:24.841" endtime="20231003 09:17:24.841"/>
+<msg timestamp="20231003 17:48:17.452" level="INFO">1</msg>
+<status status="PASS" starttime="20231003 17:48:17.452" endtime="20231003 17:48:17.452"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
-<arg>${referenceName}</arg>
-<arg>${testName}</arg>
+<arg>${referenceReceived}</arg>
+<arg>${receivedName}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20231003 09:17:24.841" endtime="20231003 09:17:24.841"/>
+<status status="PASS" starttime="20231003 17:48:17.452" endtime="20231003 17:48:17.452"/>
 </kw>
-<status status="NOT RUN" starttime="20231003 09:17:24.840" endtime="20231003 09:17:24.841"/>
+<status status="PASS" starttime="20231003 17:48:12.659" endtime="20231003 17:48:17.452"/>
 </iter>
-<status status="NOT RUN" starttime="20231003 09:17:24.839" endtime="20231003 09:17:24.841"/>
+<iter>
+<var name="${index}">2</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:18.460" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:17.458" endtime="20231003 17:48:18.460"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${testName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:18.460" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]</msg>
+<status status="PASS" starttime="20231003 17:48:18.460" endtime="20231003 17:48:18.460"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${receivedName}</var>
+<arg>${testName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:18.545" level="INFO">${receivedName} = Komponentit</msg>
+<status status="PASS" starttime="20231003 17:48:18.460" endtime="20231003 17:48:18.545"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${testName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:18.545" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]'.</msg>
+<status status="PASS" starttime="20231003 17:48:18.545" endtime="20231003 17:48:20.684"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:21.685" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:20.684" endtime="20231003 17:48:21.685"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:21.685" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
+<status status="PASS" starttime="20231003 17:48:21.685" endtime="20231003 17:48:21.685"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceReceived}</var>
+<arg>${referenceName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:21.733" level="INFO">${referenceReceived} = Komponentit</msg>
+<status status="PASS" starttime="20231003 17:48:21.688" endtime="20231003 17:48:21.733"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231003 17:48:21.733" level="INFO">2</msg>
+<status status="PASS" starttime="20231003 17:48:21.733" endtime="20231003 17:48:21.733"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${referenceReceived}</arg>
+<arg>${receivedName}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231003 17:48:21.733" endtime="20231003 17:48:21.739"/>
+</kw>
+<status status="PASS" starttime="20231003 17:48:17.457" endtime="20231003 17:48:21.739"/>
+</iter>
+<iter>
+<var name="${index}">3</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:22.743" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:21.740" endtime="20231003 17:48:22.743"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${testName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:22.743" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[3]</msg>
+<status status="PASS" starttime="20231003 17:48:22.743" endtime="20231003 17:48:22.743"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${receivedName}</var>
+<arg>${testName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:22.823" level="INFO">${receivedName} = Oheislaitteet</msg>
+<status status="PASS" starttime="20231003 17:48:22.743" endtime="20231003 17:48:22.823"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${testName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:22.823" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[3]'.</msg>
+<status status="PASS" starttime="20231003 17:48:22.823" endtime="20231003 17:48:26.640"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:27.641" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:26.640" endtime="20231003 17:48:27.641"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:27.641" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
+<status status="PASS" starttime="20231003 17:48:27.641" endtime="20231003 17:48:27.641"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceReceived}</var>
+<arg>${referenceName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:27.688" level="INFO">${referenceReceived} = Oheislaitteet</msg>
+<status status="PASS" starttime="20231003 17:48:27.641" endtime="20231003 17:48:27.688"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231003 17:48:27.688" level="INFO">3</msg>
+<status status="PASS" starttime="20231003 17:48:27.688" endtime="20231003 17:48:27.688"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${referenceReceived}</arg>
+<arg>${receivedName}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231003 17:48:27.688" endtime="20231003 17:48:27.688"/>
+</kw>
+<status status="PASS" starttime="20231003 17:48:21.740" endtime="20231003 17:48:27.688"/>
+</iter>
+<iter>
+<var name="${index}">4</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:28.689" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:27.688" endtime="20231003 17:48:28.689"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${testName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:28.689" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[4]</msg>
+<status status="PASS" starttime="20231003 17:48:28.689" endtime="20231003 17:48:28.689"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${receivedName}</var>
+<arg>${testName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:28.755" level="INFO">${receivedName} = Pelaaminen</msg>
+<status status="PASS" starttime="20231003 17:48:28.692" endtime="20231003 17:48:28.755"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${testName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:28.755" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[4]'.</msg>
+<status status="PASS" starttime="20231003 17:48:28.755" endtime="20231003 17:48:31.540"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:32.540" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:31.540" endtime="20231003 17:48:32.540"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:32.542" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
+<status status="PASS" starttime="20231003 17:48:32.542" endtime="20231003 17:48:32.542"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceReceived}</var>
+<arg>${referenceName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:32.586" level="INFO">${referenceReceived} = Pelaaminen</msg>
+<status status="PASS" starttime="20231003 17:48:32.542" endtime="20231003 17:48:32.586"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231003 17:48:32.586" level="INFO">4</msg>
+<status status="PASS" starttime="20231003 17:48:32.586" endtime="20231003 17:48:32.586"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${referenceReceived}</arg>
+<arg>${receivedName}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231003 17:48:32.586" endtime="20231003 17:48:32.586"/>
+</kw>
+<status status="PASS" starttime="20231003 17:48:27.688" endtime="20231003 17:48:32.586"/>
+</iter>
+<iter>
+<var name="${index}">5</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:33.586" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:32.586" endtime="20231003 17:48:33.586"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${testName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:33.586" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[5]</msg>
+<status status="PASS" starttime="20231003 17:48:33.586" endtime="20231003 17:48:33.586"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${receivedName}</var>
+<arg>${testName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:33.652" level="INFO">${receivedName} = Verkkotuotteet</msg>
+<status status="PASS" starttime="20231003 17:48:33.586" endtime="20231003 17:48:33.652"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${testName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:33.652" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[5]'.</msg>
+<status status="PASS" starttime="20231003 17:48:33.652" endtime="20231003 17:48:36.060"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:37.060" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:36.060" endtime="20231003 17:48:37.060"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:37.062" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
+<status status="PASS" starttime="20231003 17:48:37.060" endtime="20231003 17:48:37.062"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceReceived}</var>
+<arg>${referenceName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:37.100" level="INFO">${referenceReceived} = Verkkotuotteet</msg>
+<status status="PASS" starttime="20231003 17:48:37.062" endtime="20231003 17:48:37.100"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231003 17:48:37.100" level="INFO">5</msg>
+<status status="PASS" starttime="20231003 17:48:37.100" endtime="20231003 17:48:37.100"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${referenceReceived}</arg>
+<arg>${receivedName}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231003 17:48:37.100" endtime="20231003 17:48:37.108"/>
+</kw>
+<status status="PASS" starttime="20231003 17:48:32.586" endtime="20231003 17:48:37.108"/>
+</iter>
+<iter>
+<var name="${index}">6</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:38.109" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:37.108" endtime="20231003 17:48:38.109"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${testName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:38.109" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[6]</msg>
+<status status="PASS" starttime="20231003 17:48:38.109" endtime="20231003 17:48:38.109"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${receivedName}</var>
+<arg>${testName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:38.199" level="INFO">${receivedName} = Tarvikkeet</msg>
+<status status="PASS" starttime="20231003 17:48:38.109" endtime="20231003 17:48:38.199"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${testName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:38.199" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[6]'.</msg>
+<status status="PASS" starttime="20231003 17:48:38.199" endtime="20231003 17:48:40.279"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:41.282" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:40.280" endtime="20231003 17:48:41.282"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:41.282" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
+<status status="PASS" starttime="20231003 17:48:41.282" endtime="20231003 17:48:41.282"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceReceived}</var>
+<arg>${referenceName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:41.330" level="INFO">${referenceReceived} = Tarvikkeet</msg>
+<status status="PASS" starttime="20231003 17:48:41.282" endtime="20231003 17:48:41.330"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231003 17:48:41.330" level="INFO">6</msg>
+<status status="PASS" starttime="20231003 17:48:41.330" endtime="20231003 17:48:41.330"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${referenceReceived}</arg>
+<arg>${receivedName}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231003 17:48:41.330" endtime="20231003 17:48:41.338"/>
+</kw>
+<status status="PASS" starttime="20231003 17:48:37.108" endtime="20231003 17:48:41.338"/>
+</iter>
+<iter>
+<var name="${index}">7</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:42.339" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:41.338" endtime="20231003 17:48:42.339"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${testName}</var>
+<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:42.339" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[7]</msg>
+<status status="PASS" starttime="20231003 17:48:42.339" endtime="20231003 17:48:42.339"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${receivedName}</var>
+<arg>${testName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:42.397" level="INFO">${receivedName} = Erikoistuotteet</msg>
+<status status="PASS" starttime="20231003 17:48:42.339" endtime="20231003 17:48:42.397"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${testName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:42.405" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[7]'.</msg>
+<status status="PASS" starttime="20231003 17:48:42.405" endtime="20231003 17:48:44.931"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231003 17:48:45.932" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231003 17:48:44.931" endtime="20231003 17:48:45.932"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${referenceName}</var>
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231003 17:48:45.932" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
+<status status="PASS" starttime="20231003 17:48:45.932" endtime="20231003 17:48:45.932"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${referenceReceived}</var>
+<arg>${referenceName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 17:48:45.979" level="INFO">${referenceReceived} = Jäähdytys- ja erikoistuotteet</msg>
+<status status="PASS" starttime="20231003 17:48:45.932" endtime="20231003 17:48:45.979"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231003 17:48:45.979" level="INFO">7</msg>
+<status status="PASS" starttime="20231003 17:48:45.979" endtime="20231003 17:48:45.979"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${referenceReceived}</arg>
+<arg>${receivedName}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20231003 17:48:45.979" level="FAIL">Jäähdytys- ja erikoistuotteet != Erikoistuotteet</msg>
+<status status="FAIL" starttime="20231003 17:48:45.979" endtime="20231003 17:48:45.979"/>
+</kw>
+<status status="FAIL" starttime="20231003 17:48:41.338" endtime="20231003 17:48:45.979"/>
+</iter>
+<status status="FAIL" starttime="20231003 17:48:12.654" endtime="20231003 17:48:45.987"/>
 </for>
-<status status="FAIL" starttime="20231003 09:17:21.658" endtime="20231003 09:17:24.841">Element with locator 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[index]/a' not found.</status>
+<status status="FAIL" starttime="20231003 17:48:03.056" endtime="20231003 17:48:45.990">Jäähdytys- ja erikoistuotteet != Erikoistuotteet</status>
 </test>
-<status status="FAIL" starttime="20231003 09:17:21.486" endtime="20231003 09:17:24.841"/>
+<status status="FAIL" starttime="20231003 17:48:02.806" endtime="20231003 17:48:45.996"/>
 </suite>
 <statistics>
 <total>
@@ -86,6 +495,6 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231003 09:17:24.411" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20231003 17:48:12.551" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
 </errors>
 </robot>
