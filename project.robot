@@ -70,15 +70,15 @@ extra task1 - payment
     Click Element    name:FirstName   
     Input Text    name:FirstName    Mike
     Click Element    name:LastName   
-    Input Text    name:LastName    Hunt 
+    Input Text    name:LastName    Michael 
     Click Element    name:Address   
-    Input Text    name:Address    Locastreet 23
+    Input Text    name:Address    Visamäentie 23
     Click Element    name:PostalCode   
     Input Text    name:PostalCode    13100
     Click Element    name:City   
-    Input Text    name:City    Locaville
+    Input Text    name:City    Hämeenlinna
     Click Element    name:EmailAddress   
-    Input Text    name:EmailAddress    mike.hunt@student.hamk.fi
+    Input Text    name:EmailAddress    mike.michael@student.hamk.fi
     Click Element    name:Phone   
     Input Text    name:Phone    +358403456789
     Click Element    xpath:/html/body/main/div/div[2]/div/div[1]/form/div/div[6]/input
@@ -123,27 +123,46 @@ extra task2 - register
     Sleep    1
     Click Element    xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a
     Reload Page
+    Sleep    1
     Page Should Contain    Uusi asiakas
     Select Radio Button    selectedTab    private-tab-input
     Click Element    name:EmailAddress   
-    Input Text    name:EmailAddress    mike.hunt@gmail.com
+    Input Text    name:EmailAddress    mike.michael@gmail.com
     Sleep    1
     Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input
-    Input Text    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input    test1
+    Input Text    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input    test1test
     Click Element    name:ConfirmPassword
-    Input Text    name:ConfirmPassword    test1
+    Input Text    name:ConfirmPassword    test1test
 
     Click Element    name:FirstName
     Input Text    name:FirstName    Mike
     Click Element    name:LastName
-    Input Text    name:LastName    Hunt
+    Input Text    name:LastName    Michael
+
+    Run Keyword And Continue On Failure    Scroll Element Into View    name:Address
+    Wait Until Page Contains Element    name:Address
     Click Element    name:Address
-    Input Text    name:Address    Locaville 420
+    Input Text    name:Address    Visamäentie 23
+
+    Run Keyword And Continue On Failure    Scroll Element Into View    name:PostalCode
+    Wait Until Page Contains Element    name:PostalCode
     Click Element    name:PostalCode
-    Input Text    name:PostalCode    420
+    Input Text    name:PostalCode    13100
+    
+    Run Keyword And Continue On Failure    Scroll Element Into View    name:City
+    Wait Until Page Contains Element    name:City
     Click Element    name:City
-    Input Text    name:City    Locaville
+    Input Text    name:City    Hämeenlinna
+
+    Run Keyword And Continue On Failure    Scroll Element Into View    name:Phone
+    Wait Until Page Contains Element    name:Phone
     Click Element    name:Phone
     Input Text    name:Phone    +358403456789
+
+    Run Keyword And Continue On Failure    Scroll Element Into View    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input
+    Wait Until Page Contains Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input
     Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input
+
+    Run Keyword And Continue On Failure    Scroll Element Into View    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input
+    Wait Until Page Contains Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input
     Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input

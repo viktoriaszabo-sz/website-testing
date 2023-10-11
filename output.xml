@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231009 15:07:36.933" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231011 12:29:17.339" rpa="false" schemaversion="4">
 <suite id="s1" name="Project" source="c:\Users\vikiv\Desktop\1st module\website-testing\project.robot">
 <test id="s1-t1" name="extra task2 - register" line="119">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -7,229 +7,442 @@
 <arg>Chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231009 15:07:37.545" level="INFO">Opening browser 'Chrome' to base url 'http://jimms.fi'.</msg>
-<status status="PASS" starttime="20231009 15:07:37.544" endtime="20231009 15:07:44.387"/>
+<msg timestamp="20231011 12:29:17.631" level="INFO">Opening browser 'Chrome' to base url 'http://jimms.fi'.</msg>
+<status status="PASS" starttime="20231011 12:29:17.630" endtime="20231011 12:29:22.236"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231009 15:07:44.391" endtime="20231009 15:07:45.445"/>
+<status status="PASS" starttime="20231011 12:29:22.237" endtime="20231011 12:29:22.704"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231009 15:07:46.447" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231009 15:07:45.446" endtime="20231009 15:07:46.448"/>
+<msg timestamp="20231011 12:29:23.707" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231011 12:29:22.706" endtime="20231011 12:29:23.708"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:46.451" level="INFO">Clicking element 'xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a'.</msg>
-<status status="PASS" starttime="20231009 15:07:46.449" endtime="20231009 15:07:47.593"/>
+<msg timestamp="20231011 12:29:23.711" level="INFO">Clicking element 'xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a'.</msg>
+<status status="PASS" starttime="20231011 12:29:23.709" endtime="20231011 12:29:24.497"/>
 </kw>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20231009 15:07:47.595" endtime="20231009 15:07:48.200"/>
+<status status="PASS" starttime="20231011 12:29:24.498" endtime="20231011 12:29:25.050"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231011 12:29:26.053" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231011 12:29:25.052" endtime="20231011 12:29:26.054"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Uusi asiakas</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231009 15:07:48.252" level="INFO">Current page contains text 'Uusi asiakas'.</msg>
-<status status="PASS" starttime="20231009 15:07:48.201" endtime="20231009 15:07:48.253"/>
+<msg timestamp="20231011 12:29:26.089" level="INFO">Current page contains text 'Uusi asiakas'.</msg>
+<status status="PASS" starttime="20231011 12:29:26.055" endtime="20231011 12:29:26.090"/>
 </kw>
 <kw name="Select Radio Button" library="SeleniumLibrary">
 <arg>selectedTab</arg>
 <arg>private-tab-input</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20231009 15:07:48.258" level="INFO">Selecting 'private-tab-input' from radio button 'selectedTab'.</msg>
-<status status="PASS" starttime="20231009 15:07:48.257" endtime="20231009 15:07:48.438"/>
+<msg timestamp="20231011 12:29:26.092" level="INFO">Selecting 'private-tab-input' from radio button 'selectedTab'.</msg>
+<status status="PASS" starttime="20231011 12:29:26.091" endtime="20231011 12:29:26.248"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:EmailAddress</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:48.441" level="INFO">Clicking element 'name:EmailAddress'.</msg>
-<status status="PASS" starttime="20231009 15:07:48.440" endtime="20231009 15:07:48.576"/>
+<msg timestamp="20231011 12:29:26.252" level="INFO">Clicking element 'name:EmailAddress'.</msg>
+<status status="PASS" starttime="20231011 12:29:26.249" endtime="20231011 12:29:26.388"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:EmailAddress</arg>
-<arg>mike.hunt@gmail.com</arg>
+<arg>mike.michael@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:48.578" level="INFO">Typing text 'mike.hunt@gmail.com' into text field 'name:EmailAddress'.</msg>
-<status status="PASS" starttime="20231009 15:07:48.577" endtime="20231009 15:07:48.840"/>
+<msg timestamp="20231011 12:29:26.393" level="INFO">Typing text 'mike.michael@gmail.com' into text field 'name:EmailAddress'.</msg>
+<status status="PASS" starttime="20231011 12:29:26.392" endtime="20231011 12:29:26.685"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231009 15:07:49.842" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231009 15:07:48.841" endtime="20231009 15:07:49.844"/>
+<msg timestamp="20231011 12:29:27.688" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231011 12:29:26.687" endtime="20231011 12:29:27.689"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:49.852" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
-<status status="PASS" starttime="20231009 15:07:49.848" endtime="20231009 15:07:50.130"/>
+<msg timestamp="20231011 12:29:27.690" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20231011 12:29:27.690" endtime="20231011 12:29:27.765"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input</arg>
-<arg>test1</arg>
+<arg>test1test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:50.139" level="INFO">Typing text 'test1' into text field 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
-<status status="PASS" starttime="20231009 15:07:50.133" endtime="20231009 15:07:50.479"/>
+<msg timestamp="20231011 12:29:27.767" level="INFO">Typing text 'test1test' into text field 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20231011 12:29:27.766" endtime="20231011 12:29:27.898"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:ConfirmPassword</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:50.485" level="INFO">Clicking element 'name:ConfirmPassword'.</msg>
-<status status="PASS" starttime="20231009 15:07:50.482" endtime="20231009 15:07:50.727"/>
+<msg timestamp="20231011 12:29:27.900" level="INFO">Clicking element 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20231011 12:29:27.898" endtime="20231011 12:29:27.999"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:ConfirmPassword</arg>
-<arg>test1</arg>
+<arg>test1test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:50.734" level="INFO">Typing text 'test1' into text field 'name:ConfirmPassword'.</msg>
-<status status="PASS" starttime="20231009 15:07:50.730" endtime="20231009 15:07:51.063"/>
+<msg timestamp="20231011 12:29:28.001" level="INFO">Typing text 'test1test' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20231011 12:29:28.000" endtime="20231011 12:29:28.140"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:FirstName</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:51.069" level="INFO">Clicking element 'name:FirstName'.</msg>
-<status status="PASS" starttime="20231009 15:07:51.066" endtime="20231009 15:07:51.330"/>
+<msg timestamp="20231011 12:29:28.142" level="INFO">Clicking element 'name:FirstName'.</msg>
+<status status="PASS" starttime="20231011 12:29:28.141" endtime="20231011 12:29:28.230"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:FirstName</arg>
 <arg>Mike</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:51.338" level="INFO">Typing text 'Mike' into text field 'name:FirstName'.</msg>
-<status status="PASS" starttime="20231009 15:07:51.335" endtime="20231009 15:07:51.648"/>
+<msg timestamp="20231011 12:29:28.232" level="INFO">Typing text 'Mike' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20231011 12:29:28.232" endtime="20231011 12:29:28.354"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:LastName</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:51.655" level="INFO">Clicking element 'name:LastName'.</msg>
-<status status="PASS" starttime="20231009 15:07:51.651" endtime="20231009 15:07:51.982"/>
+<msg timestamp="20231011 12:29:28.357" level="INFO">Clicking element 'name:LastName'.</msg>
+<status status="PASS" starttime="20231011 12:29:28.356" endtime="20231011 12:29:28.499"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:LastName</arg>
-<arg>Hunt</arg>
+<arg>Michael</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:52.043" level="INFO">Typing text 'Hunt' into text field 'name:LastName'.</msg>
-<status status="PASS" starttime="20231009 15:07:52.038" endtime="20231009 15:07:52.266"/>
+<msg timestamp="20231011 12:29:28.502" level="INFO">Typing text 'Michael' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20231011 12:29:28.500" endtime="20231011 12:29:28.625"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
 <arg>name:Address</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231009 15:07:52.273" level="INFO">Clicking element 'name:Address'.</msg>
-<msg timestamp="20231009 15:07:53.818" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231009 15:07:53.818" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (759, 743)
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>name:Address</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20231011 12:29:28.965" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231011 12:29:28.965" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
   (Session info: chrome=117.0.5938.150)
 Stacktrace:
-	GetHandleVerifier [0x00007FF7811D7D32+55474]
-	(No symbol) [0x00007FF7811477E2]
-	(No symbol) [0x00007FF780FFE0EB]
-	(No symbol) [0x00007FF781044E7B]
-	(No symbol) [0x00007FF781043249]
-	(No symbol) [0x00007FF781041018]
-	(No symbol) [0x00007FF7810400D3]
-	(No symbol) [0x00007FF781035DCF]
-	(No symbol) [0x00007FF78105F15A]
-	(No symbol) [0x00007FF7810356E6]
-	(No symbol) [0x00007FF78105F370]
-	(No symbol) [0x00007FF781077EF2]
-	(No symbol) [0x00007FF78105EF33]
-	(No symbol) [0x00007FF781033D41]
-	(No symbol) [0x00007FF781034F84]
-	GetHandleVerifier [0x00007FF78153B772+3609330]
-	GetHandleVerifier [0x00007FF781591A90+3962384]
-	GetHandleVerifier [0x00007FF781589F1F+3930783]
-	GetHandleVerifier [0x00007FF781273CC6+694342]
-	(No symbol) [0x00007FF781152238]
-	(No symbol) [0x00007FF78114E4A4]
-	(No symbol) [0x00007FF78114E5D2]
-	(No symbol) [0x00007FF78113EE33]
+	GetHandleVerifier [0x00007FF73F6C7D32+55474]
+	(No symbol) [0x00007FF73F6377E2]
+	(No symbol) [0x00007FF73F4EDF9D]
+	(No symbol) [0x00007FF73F570585]
+	(No symbol) [0x00007FF73F54F15A]
+	(No symbol) [0x00007FF73F567EF2]
+	(No symbol) [0x00007FF73F54EF33]
+	(No symbol) [0x00007FF73F523D41]
+	(No symbol) [0x00007FF73F524F84]
+	GetHandleVerifier [0x00007FF73FA2B772+3609330]
+	GetHandleVerifier [0x00007FF73FA81A90+3962384]
+	GetHandleVerifier [0x00007FF73FA79F1F+3930783]
+	GetHandleVerifier [0x00007FF73F763CC6+694342]
+	(No symbol) [0x00007FF73F642238]
+	(No symbol) [0x00007FF73F63E4A4]
+	(No symbol) [0x00007FF73F63E5D2]
+	(No symbol) [0x00007FF73F62EE33]
 	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
 	RtlUserThreadStart [0x00007FFECAEE485B+43]
 </msg>
-<status status="FAIL" starttime="20231009 15:07:52.269" endtime="20231009 15:07:53.833"/>
+<status status="FAIL" starttime="20231011 12:29:28.627" endtime="20231011 12:29:28.976"/>
+</kw>
+<status status="FAIL" starttime="20231011 12:29:28.627" endtime="20231011 12:29:28.977"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:Address</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231011 12:29:28.978" endtime="20231011 12:29:28.993"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:Address</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231011 12:29:28.996" level="INFO">Clicking element 'name:Address'.</msg>
+<status status="PASS" starttime="20231011 12:29:28.995" endtime="20231011 12:29:29.126"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:Address</arg>
-<arg>Locaville 420</arg>
+<arg>Visamäentie 23</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.835" endtime="20231009 15:07:53.835"/>
+<msg timestamp="20231011 12:29:29.131" level="INFO">Typing text 'Visamäentie 23' into text field 'name:Address'.</msg>
+<status status="PASS" starttime="20231011 12:29:29.127" endtime="20231011 12:29:29.335"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>name:PostalCode</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>name:PostalCode</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20231011 12:29:29.658" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231011 12:29:29.659" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73F6C7D32+55474]
+	(No symbol) [0x00007FF73F6377E2]
+	(No symbol) [0x00007FF73F4EDF9D]
+	(No symbol) [0x00007FF73F570585]
+	(No symbol) [0x00007FF73F54F15A]
+	(No symbol) [0x00007FF73F567EF2]
+	(No symbol) [0x00007FF73F54EF33]
+	(No symbol) [0x00007FF73F523D41]
+	(No symbol) [0x00007FF73F524F84]
+	GetHandleVerifier [0x00007FF73FA2B772+3609330]
+	GetHandleVerifier [0x00007FF73FA81A90+3962384]
+	GetHandleVerifier [0x00007FF73FA79F1F+3930783]
+	GetHandleVerifier [0x00007FF73F763CC6+694342]
+	(No symbol) [0x00007FF73F642238]
+	(No symbol) [0x00007FF73F63E4A4]
+	(No symbol) [0x00007FF73F63E5D2]
+	(No symbol) [0x00007FF73F62EE33]
+	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
+	RtlUserThreadStart [0x00007FFECAEE485B+43]
+</msg>
+<status status="FAIL" starttime="20231011 12:29:29.338" endtime="20231011 12:29:29.662"/>
+</kw>
+<status status="FAIL" starttime="20231011 12:29:29.336" endtime="20231011 12:29:29.662"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:PostalCode</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231011 12:29:29.664" endtime="20231011 12:29:29.683"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:PostalCode</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.837" endtime="20231009 15:07:53.837"/>
+<msg timestamp="20231011 12:29:29.686" level="INFO">Clicking element 'name:PostalCode'.</msg>
+<status status="PASS" starttime="20231011 12:29:29.685" endtime="20231011 12:29:29.897"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:PostalCode</arg>
-<arg>420</arg>
+<arg>13100</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.839" endtime="20231009 15:07:53.839"/>
+<msg timestamp="20231011 12:29:29.901" level="INFO">Typing text '13100' into text field 'name:PostalCode'.</msg>
+<status status="PASS" starttime="20231011 12:29:29.899" endtime="20231011 12:29:30.041"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>name:City</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>name:City</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231011 12:29:30.043" endtime="20231011 12:29:30.331"/>
+</kw>
+<status status="PASS" starttime="20231011 12:29:30.042" endtime="20231011 12:29:30.332"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:City</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231011 12:29:30.334" endtime="20231011 12:29:30.352"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:City</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.840" endtime="20231009 15:07:53.841"/>
+<msg timestamp="20231011 12:29:30.354" level="INFO">Clicking element 'name:City'.</msg>
+<status status="PASS" starttime="20231011 12:29:30.353" endtime="20231011 12:29:30.475"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:City</arg>
-<arg>Locaville</arg>
+<arg>Hämeenlinna</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.842" endtime="20231009 15:07:53.843"/>
+<msg timestamp="20231011 12:29:30.477" level="INFO">Typing text 'Hämeenlinna' into text field 'name:City'.</msg>
+<status status="PASS" starttime="20231011 12:29:30.476" endtime="20231011 12:29:30.648"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>name:Phone</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>name:Phone</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20231011 12:29:30.920" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231011 12:29:30.920" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73F6C7D32+55474]
+	(No symbol) [0x00007FF73F6377E2]
+	(No symbol) [0x00007FF73F4EDF9D]
+	(No symbol) [0x00007FF73F570585]
+	(No symbol) [0x00007FF73F54F15A]
+	(No symbol) [0x00007FF73F567EF2]
+	(No symbol) [0x00007FF73F54EF33]
+	(No symbol) [0x00007FF73F523D41]
+	(No symbol) [0x00007FF73F524F84]
+	GetHandleVerifier [0x00007FF73FA2B772+3609330]
+	GetHandleVerifier [0x00007FF73FA81A90+3962384]
+	GetHandleVerifier [0x00007FF73FA79F1F+3930783]
+	GetHandleVerifier [0x00007FF73F763CC6+694342]
+	(No symbol) [0x00007FF73F642238]
+	(No symbol) [0x00007FF73F63E4A4]
+	(No symbol) [0x00007FF73F63E5D2]
+	(No symbol) [0x00007FF73F62EE33]
+	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
+	RtlUserThreadStart [0x00007FFECAEE485B+43]
+</msg>
+<status status="FAIL" starttime="20231011 12:29:30.650" endtime="20231011 12:29:30.922"/>
+</kw>
+<status status="FAIL" starttime="20231011 12:29:30.649" endtime="20231011 12:29:30.923"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:Phone</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231011 12:29:30.924" endtime="20231011 12:29:30.936"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:Phone</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.844" endtime="20231009 15:07:53.844"/>
+<msg timestamp="20231011 12:29:30.939" level="INFO">Clicking element 'name:Phone'.</msg>
+<status status="PASS" starttime="20231011 12:29:30.938" endtime="20231011 12:29:31.026"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:Phone</arg>
 <arg>+358403456789</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.849" endtime="20231009 15:07:53.849"/>
+<msg timestamp="20231011 12:29:31.029" level="INFO">Typing text '+358403456789' into text field 'name:Phone'.</msg>
+<status status="PASS" starttime="20231011 12:29:31.028" endtime="20231011 12:29:31.220"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20231011 12:29:31.503" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231011 12:29:31.504" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73F6C7D32+55474]
+	(No symbol) [0x00007FF73F6377E2]
+	(No symbol) [0x00007FF73F4EDF9D]
+	(No symbol) [0x00007FF73F570585]
+	(No symbol) [0x00007FF73F54F15A]
+	(No symbol) [0x00007FF73F567EF2]
+	(No symbol) [0x00007FF73F54EF33]
+	(No symbol) [0x00007FF73F523D41]
+	(No symbol) [0x00007FF73F524F84]
+	GetHandleVerifier [0x00007FF73FA2B772+3609330]
+	GetHandleVerifier [0x00007FF73FA81A90+3962384]
+	GetHandleVerifier [0x00007FF73FA79F1F+3930783]
+	GetHandleVerifier [0x00007FF73F763CC6+694342]
+	(No symbol) [0x00007FF73F642238]
+	(No symbol) [0x00007FF73F63E4A4]
+	(No symbol) [0x00007FF73F63E5D2]
+	(No symbol) [0x00007FF73F62EE33]
+	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
+	RtlUserThreadStart [0x00007FFECAEE485B+43]
+</msg>
+<status status="FAIL" starttime="20231011 12:29:31.222" endtime="20231011 12:29:31.506"/>
+</kw>
+<status status="FAIL" starttime="20231011 12:29:31.221" endtime="20231011 12:29:31.506"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231011 12:29:31.507" endtime="20231011 12:29:31.521"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.851" endtime="20231009 15:07:53.851"/>
+<msg timestamp="20231011 12:29:31.523" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input'.</msg>
+<status status="PASS" starttime="20231011 12:29:31.522" endtime="20231011 12:29:31.615"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20231011 12:29:31.900" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231011 12:29:31.901" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73F6C7D32+55474]
+	(No symbol) [0x00007FF73F6377E2]
+	(No symbol) [0x00007FF73F4EDF9D]
+	(No symbol) [0x00007FF73F570585]
+	(No symbol) [0x00007FF73F54F15A]
+	(No symbol) [0x00007FF73F567EF2]
+	(No symbol) [0x00007FF73F54EF33]
+	(No symbol) [0x00007FF73F523D41]
+	(No symbol) [0x00007FF73F524F84]
+	GetHandleVerifier [0x00007FF73FA2B772+3609330]
+	GetHandleVerifier [0x00007FF73FA81A90+3962384]
+	GetHandleVerifier [0x00007FF73FA79F1F+3930783]
+	GetHandleVerifier [0x00007FF73F763CC6+694342]
+	(No symbol) [0x00007FF73F642238]
+	(No symbol) [0x00007FF73F63E4A4]
+	(No symbol) [0x00007FF73F63E5D2]
+	(No symbol) [0x00007FF73F62EE33]
+	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
+	RtlUserThreadStart [0x00007FFECAEE485B+43]
+</msg>
+<status status="FAIL" starttime="20231011 12:29:31.620" endtime="20231011 12:29:31.904"/>
+</kw>
+<status status="FAIL" starttime="20231011 12:29:31.618" endtime="20231011 12:29:31.904"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231011 12:29:31.905" endtime="20231011 12:29:31.921"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231009 15:07:53.852" endtime="20231009 15:07:53.853"/>
+<msg timestamp="20231011 12:29:31.923" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input'.</msg>
+<status status="PASS" starttime="20231011 12:29:31.922" endtime="20231011 12:29:33.595"/>
 </kw>
-<status status="FAIL" starttime="20231009 15:07:37.542" endtime="20231009 15:07:53.854">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (759, 743)
+<status status="FAIL" starttime="20231011 12:29:17.630" endtime="20231011 12:29:33.597">Several failures occurred:
+
+1) MoveTargetOutOfBoundsException: Message: move target out of bounds
   (Session info: chrome=117.0.5938.150)
 Stacktrace:
-	GetHandleVerifier [0x00007FF7811D7D32+55474]
-	(No symbol) [0x00007FF7811477E2]
-	(No symbol) [0x00007FF780FFE0EB]
-	(No symbol) [0x00007FF781044E7B]
-	(No symbol) [0x00007FF781043249]
-	(No symbol) [0x00007FF781041018]
-	(No symbol) [0x00007FF7810400D3]
-	(No symbol) [0x00007FF781035DCF]
-	(No symbol) [0x00007FF78105F15A]
-	(No symbol) [0x00007FF7810356E6]
-	(No symbol) [0x00007FF78105F370]
-	(No symbol) [0x00007FF781077EF2]
-	(No symbol) [0x00007FF78105EF33]
-	(No symbol) [0x00007FF781033D41]
-	(No symbol) [0x00007FF781034F84]
-	GetHandleVerifier [0x00007FF78153B772+3609330]
-	GetHandleVerifier [0x00007FF781591A90+3962384]
-	GetHandleVerifier [0x00007FF781589F1F+3930783]
-	GetHandleVerifier [0x00007FF781273CC6+694342]
-	(No symbol) [0x00007FF781152238]
-	(No symbol) [0x00007FF78114E4A4]
-	(No symbol) [0x00007FF78114E5D2]
-	(No symbol) [0x00007FF78113EE33]
+	GetHandleVerifier [0x00007FF73F6C7D32+55474]
+	(No symbol) [0x00007FF73F6377E2]
+	(No symbol) [0x00007FF73F4EDF9D]
+	(No symbol) [0x00007FF73F570585]
+	(No symbol) [0x00007FF73F54F15A]
+	(No symbol) [0x00007FF73F567EF2]
+	(No symbol) [0x00007FF73F54EF33]
+	(No symbol) [0x00007FF73F523D41]
+	(No symbol) [0x00007FF73F524F84]
+	GetHandleVerifier [0x00007FF73FA2B772+3609330]
+	GetHandleVerifier [0x00007FF73FA81A90+3962384]
+	GetHandleVerifier [0x00007FF73FA79F1F+3930783]
+	GetHandleVerifier [0x00007FF73F763CC6+694342]
+	(No symbol) [0x00007FF73F642238]
+	(No symbol) [0x00007FF73F63E4A4]
+    [ Message content over the limit has been removed. ]
+Stacktrace:
+	GetHandleVerifier [0x00007FF73F6C7D32+55474]
+	(No symbol) [0x00007FF73F6377E2]
+	(No symbol) [0x00007FF73F4EDF9D]
+	(No symbol) [0x00007FF73F570585]
+	(No symbol) [0x00007FF73F54F15A]
+	(No symbol) [0x00007FF73F567EF2]
+	(No symbol) [0x00007FF73F54EF33]
+	(No symbol) [0x00007FF73F523D41]
+	(No symbol) [0x00007FF73F524F84]
+	GetHandleVerifier [0x00007FF73FA2B772+3609330]
+	GetHandleVerifier [0x00007FF73FA81A90+3962384]
+	GetHandleVerifier [0x00007FF73FA79F1F+3930783]
+	GetHandleVerifier [0x00007FF73F763CC6+694342]
+	(No symbol) [0x00007FF73F642238]
+	(No symbol) [0x00007FF73F63E4A4]
+	(No symbol) [0x00007FF73F63E5D2]
+	(No symbol) [0x00007FF73F62EE33]
 	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
-	RtlUserThreadStart [0x00007FFECAEE485B+43]
-</status>
+	RtlUserThreadStart [0x00007FFECAEE485B+43]</status>
 </test>
-<status status="FAIL" starttime="20231009 15:07:36.945" endtime="20231009 15:07:53.866"/>
+<status status="FAIL" starttime="20231011 12:29:17.346" endtime="20231011 12:29:33.607"/>
 </suite>
 <statistics>
 <total>
