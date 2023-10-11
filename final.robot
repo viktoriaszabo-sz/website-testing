@@ -173,20 +173,16 @@ extra task3 - Login
 
     Click Element    xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a
     Click Element    name:UserName    
-    Input Text    name:UserName    Robot
+    Input Text    name:UserName    mike.michael@student.hamk.fi
     
     Click Element    name:Password    
-    Input Text    name:Password    password
+    Input Text    name:Password    test1test
 
     Click Element    id:loginbtn
-    Page Should Contain    Virheellinen käyttäjätunnus tai salasana.    #Invalid username or password.
+    Page Should Not Contain    Virheellinen käyttäjätunnus tai salasana.    #Invalid username or password.
     Close Browser
 
 extra task 4 - Select a product
-    Open Browser    http://jimms.fi    Chrome    options=add_experimental_option("detach", True)
-    
-    Maximize Browser Window
-
     Page Should Contain    Oheislaitteet
 
     # Click
