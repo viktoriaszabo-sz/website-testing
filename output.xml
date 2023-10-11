@@ -1,1239 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231007 22:32:31.402" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231009 15:07:36.933" rpa="false" schemaversion="4">
 <suite id="s1" name="Project" source="c:\Users\vikiv\Desktop\1st module\website-testing\project.robot">
-<test id="s1-t1" name="1.landing pages" line="8">
+<test id="s1-t1" name="extra task2 - register" line="119">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>http://jimms.fi</arg>
 <arg>Chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231007 22:32:32.453" level="INFO">Opening browser 'Chrome' to base url 'http://jimms.fi'.</msg>
-<status status="PASS" starttime="20231007 22:32:32.451" endtime="20231007 22:32:39.905"/>
+<msg timestamp="20231009 15:07:37.545" level="INFO">Opening browser 'Chrome' to base url 'http://jimms.fi'.</msg>
+<status status="PASS" starttime="20231009 15:07:37.544" endtime="20231009 15:07:44.387"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231007 22:32:39.913" endtime="20231007 22:32:41.312"/>
+<status status="PASS" starttime="20231009 15:07:44.391" endtime="20231009 15:07:45.445"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231009 15:07:46.447" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231009 15:07:45.446" endtime="20231009 15:07:46.448"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231009 15:07:46.451" level="INFO">Clicking element 'xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a'.</msg>
+<status status="PASS" starttime="20231009 15:07:46.449" endtime="20231009 15:07:47.593"/>
 </kw>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20231007 22:32:41.315" endtime="20231007 22:32:43.186"/>
+<status status="PASS" starttime="20231009 15:07:47.595" endtime="20231009 15:07:48.200"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:32:44.193" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:32:43.191" endtime="20231007 22:32:44.195"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${Count}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[*]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20231007 22:32:44.326" level="INFO">${Count} = 10</msg>
-<status status="PASS" starttime="20231007 22:32:44.198" endtime="20231007 22:32:44.327"/>
-</kw>
-<kw name="Get Vertical Position" library="SeleniumLibrary">
-<var>${refrencePosition}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]</arg>
-<doc>Returns the vertical position of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:44.446" level="INFO">${refrencePosition} = 99</msg>
-<status status="PASS" starttime="20231007 22:32:44.358" endtime="20231007 22:32:44.446"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${index}</var>
-<value>1</value>
-<value>${Count}+1</value>
-<iter>
-<var name="${index}">1</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:44.451" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]</msg>
-<status status="PASS" starttime="20231007 22:32:44.449" endtime="20231007 22:32:44.453"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:44.524" level="INFO">${receivedName} = Tietokoneet</msg>
-<status status="PASS" starttime="20231007 22:32:44.453" endtime="20231007 22:32:44.525"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:44.526" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[1]'.</msg>
-<status status="PASS" starttime="20231007 22:32:44.525" endtime="20231007 22:32:46.416"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:32:47.421" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:32:46.418" endtime="20231007 22:32:47.422"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:47.424" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:32:47.423" endtime="20231007 22:32:47.425"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:47.523" level="INFO">${referenceReceived} = Tietokoneet</msg>
-<status status="PASS" starttime="20231007 22:32:47.426" endtime="20231007 22:32:47.524"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:32:47.526" level="INFO">1</msg>
-<status status="PASS" starttime="20231007 22:32:47.525" endtime="20231007 22:32:47.527"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:32:47.529" endtime="20231007 22:32:47.532"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:47.528" endtime="20231007 22:32:47.534"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:44.448" endtime="20231007 22:32:47.534"/>
-</iter>
-<iter>
-<var name="${index}">2</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:47.538" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]</msg>
-<status status="PASS" starttime="20231007 22:32:47.536" endtime="20231007 22:32:47.538"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:47.690" level="INFO">${receivedName} = Komponentit</msg>
-<status status="PASS" starttime="20231007 22:32:47.539" endtime="20231007 22:32:47.692"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:47.695" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[2]'.</msg>
-<status status="PASS" starttime="20231007 22:32:47.693" endtime="20231007 22:32:49.869"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:32:50.873" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:32:49.871" endtime="20231007 22:32:50.874"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:50.877" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:32:50.875" endtime="20231007 22:32:50.878"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:50.968" level="INFO">${referenceReceived} = Komponentit</msg>
-<status status="PASS" starttime="20231007 22:32:50.880" endtime="20231007 22:32:50.969"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:32:50.971" level="INFO">2</msg>
-<status status="PASS" starttime="20231007 22:32:50.969" endtime="20231007 22:32:50.972"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:32:50.974" endtime="20231007 22:32:50.977"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:50.973" endtime="20231007 22:32:50.978"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:47.535" endtime="20231007 22:32:50.979"/>
-</iter>
-<iter>
-<var name="${index}">3</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:50.984" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[3]</msg>
-<status status="PASS" starttime="20231007 22:32:50.982" endtime="20231007 22:32:50.985"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:51.148" level="INFO">${receivedName} = Oheislaitteet</msg>
-<status status="PASS" starttime="20231007 22:32:50.986" endtime="20231007 22:32:51.148"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:51.152" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[3]'.</msg>
-<status status="PASS" starttime="20231007 22:32:51.149" endtime="20231007 22:32:53.110"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:32:54.114" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:32:53.111" endtime="20231007 22:32:54.115"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:54.118" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:32:54.117" endtime="20231007 22:32:54.118"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:54.198" level="INFO">${referenceReceived} = Oheislaitteet</msg>
-<status status="PASS" starttime="20231007 22:32:54.120" endtime="20231007 22:32:54.200"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:32:54.201" level="INFO">3</msg>
-<status status="PASS" starttime="20231007 22:32:54.200" endtime="20231007 22:32:54.201"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:32:54.204" endtime="20231007 22:32:54.207"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:54.202" endtime="20231007 22:32:54.207"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:50.980" endtime="20231007 22:32:54.208"/>
-</iter>
-<iter>
-<var name="${index}">4</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:54.214" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[4]</msg>
-<status status="PASS" starttime="20231007 22:32:54.212" endtime="20231007 22:32:54.214"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:54.333" level="INFO">${receivedName} = Pelaaminen</msg>
-<status status="PASS" starttime="20231007 22:32:54.215" endtime="20231007 22:32:54.334"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:54.337" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[4]'.</msg>
-<status status="PASS" starttime="20231007 22:32:54.334" endtime="20231007 22:32:56.141"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:32:57.144" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:32:56.142" endtime="20231007 22:32:57.145"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:57.148" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:32:57.146" endtime="20231007 22:32:57.148"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:57.230" level="INFO">${referenceReceived} = Pelaaminen</msg>
-<status status="PASS" starttime="20231007 22:32:57.151" endtime="20231007 22:32:57.231"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:32:57.234" level="INFO">4</msg>
-<status status="PASS" starttime="20231007 22:32:57.232" endtime="20231007 22:32:57.235"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:32:57.237" endtime="20231007 22:32:57.239"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:57.236" endtime="20231007 22:32:57.239"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:54.210" endtime="20231007 22:32:57.240"/>
-</iter>
-<iter>
-<var name="${index}">5</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:32:57.244" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[5]</msg>
-<status status="PASS" starttime="20231007 22:32:57.243" endtime="20231007 22:32:57.245"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:57.357" level="INFO">${receivedName} = Verkkotuotteet</msg>
-<status status="PASS" starttime="20231007 22:32:57.246" endtime="20231007 22:32:57.358"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:32:57.360" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[5]'.</msg>
-<status status="PASS" starttime="20231007 22:32:57.358" endtime="20231007 22:32:59.320"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:00.323" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:32:59.321" endtime="20231007 22:33:00.324"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:00.326" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:33:00.325" endtime="20231007 22:33:00.326"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:00.406" level="INFO">${referenceReceived} = Verkkotuotteet</msg>
-<status status="PASS" starttime="20231007 22:33:00.327" endtime="20231007 22:33:00.407"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:33:00.409" level="INFO">5</msg>
-<status status="PASS" starttime="20231007 22:33:00.408" endtime="20231007 22:33:00.410"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:33:00.413" endtime="20231007 22:33:00.415"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:00.410" endtime="20231007 22:33:00.416"/>
-</kw>
-<status status="PASS" starttime="20231007 22:32:57.241" endtime="20231007 22:33:00.416"/>
-</iter>
-<iter>
-<var name="${index}">6</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:00.420" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[6]</msg>
-<status status="PASS" starttime="20231007 22:33:00.418" endtime="20231007 22:33:00.420"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:00.596" level="INFO">${receivedName} = Tarvikkeet</msg>
-<status status="PASS" starttime="20231007 22:33:00.420" endtime="20231007 22:33:00.597"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:00.601" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[6]'.</msg>
-<status status="PASS" starttime="20231007 22:33:00.598" endtime="20231007 22:33:02.464"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:03.467" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:02.465" endtime="20231007 22:33:03.468"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:03.472" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:33:03.470" endtime="20231007 22:33:03.474"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:03.607" level="INFO">${referenceReceived} = Tarvikkeet</msg>
-<status status="PASS" starttime="20231007 22:33:03.475" endtime="20231007 22:33:03.608"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:33:03.609" level="INFO">6</msg>
-<status status="PASS" starttime="20231007 22:33:03.609" endtime="20231007 22:33:03.610"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:33:03.611" endtime="20231007 22:33:03.612"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:03.610" endtime="20231007 22:33:03.613"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:00.417" endtime="20231007 22:33:03.613"/>
-</iter>
-<iter>
-<var name="${index}">7</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:03.615" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[7]</msg>
-<status status="PASS" starttime="20231007 22:33:03.615" endtime="20231007 22:33:03.616"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:03.671" level="INFO">${receivedName} = Erikoistuotteet</msg>
-<status status="PASS" starttime="20231007 22:33:03.616" endtime="20231007 22:33:03.671"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:03.673" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[7]'.</msg>
-<status status="PASS" starttime="20231007 22:33:03.672" endtime="20231007 22:33:05.498"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:06.501" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:05.499" endtime="20231007 22:33:06.502"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:06.507" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:33:06.504" endtime="20231007 22:33:06.508"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:06.683" level="INFO">${referenceReceived} = Jäähdytys- ja erikoistuotteet</msg>
-<status status="PASS" starttime="20231007 22:33:06.509" endtime="20231007 22:33:06.684"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:33:06.687" level="INFO">7</msg>
-<status status="PASS" starttime="20231007 22:33:06.685" endtime="20231007 22:33:06.689"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<msg timestamp="20231007 22:33:06.694" level="FAIL">'Jäähdytys- ja erikoistuotteet' does not contain 'Erikoistuotteet'</msg>
-<status status="FAIL" starttime="20231007 22:33:06.692" endtime="20231007 22:33:06.694"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:06.690" endtime="20231007 22:33:06.695"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:03.614" endtime="20231007 22:33:06.696"/>
-</iter>
-<iter>
-<var name="${index}">8</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:06.699" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[8]</msg>
-<status status="PASS" starttime="20231007 22:33:06.698" endtime="20231007 22:33:06.700"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:06.816" level="INFO">${receivedName} = Ohjelmistot</msg>
-<status status="PASS" starttime="20231007 22:33:06.701" endtime="20231007 22:33:06.817"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:06.822" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[8]'.</msg>
-<status status="PASS" starttime="20231007 22:33:06.819" endtime="20231007 22:33:09.019"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:10.023" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:09.021" endtime="20231007 22:33:10.024"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:10.026" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:33:10.025" endtime="20231007 22:33:10.027"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:10.109" level="INFO">${referenceReceived} = Ohjelmistot ja pelit</msg>
-<status status="PASS" starttime="20231007 22:33:10.029" endtime="20231007 22:33:10.110"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:33:10.112" level="INFO">8</msg>
-<status status="PASS" starttime="20231007 22:33:10.111" endtime="20231007 22:33:10.113"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:33:10.116" endtime="20231007 22:33:10.118"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:10.114" endtime="20231007 22:33:10.119"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:06.697" endtime="20231007 22:33:10.119"/>
-</iter>
-<iter>
-<var name="${index}">9</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:10.122" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[9]</msg>
-<status status="PASS" starttime="20231007 22:33:10.121" endtime="20231007 22:33:10.123"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:10.223" level="INFO">${receivedName} = Palvelut</msg>
-<status status="PASS" starttime="20231007 22:33:10.124" endtime="20231007 22:33:10.224"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:10.227" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[9]'.</msg>
-<status status="PASS" starttime="20231007 22:33:10.225" endtime="20231007 22:33:11.942"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:12.946" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:11.944" endtime="20231007 22:33:12.946"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:12.949" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:33:12.948" endtime="20231007 22:33:12.950"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:13.135" level="INFO">${referenceReceived} = Palvelut</msg>
-<status status="PASS" starttime="20231007 22:33:12.950" endtime="20231007 22:33:13.136"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:33:13.139" level="INFO">9</msg>
-<status status="PASS" starttime="20231007 22:33:13.137" endtime="20231007 22:33:13.140"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20231007 22:33:13.143" endtime="20231007 22:33:13.146"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:13.140" endtime="20231007 22:33:13.147"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:10.120" endtime="20231007 22:33:13.148"/>
-</iter>
-<iter>
-<var name="${index}">10</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${testName}</var>
-<arg>xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[${index}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:13.153" level="INFO">${testName} = xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[10]</msg>
-<status status="PASS" starttime="20231007 22:33:13.151" endtime="20231007 22:33:13.154"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${receivedName}</var>
-<arg>${testName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:13.249" level="INFO">${receivedName} = Kampanjat</msg>
-<status status="PASS" starttime="20231007 22:33:13.155" endtime="20231007 22:33:13.250"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${testName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:13.253" level="INFO">Clicking element 'xpath:/html/body/header/div/div[1]/jim-drilldown-mega-menu/nav/ul/li[10]'.</msg>
-<status status="PASS" starttime="20231007 22:33:13.251" endtime="20231007 22:33:13.532"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:14.533" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:13.532" endtime="20231007 22:33:14.534"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${referenceName}</var>
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231007 22:33:14.536" level="INFO">${referenceName} = xpath:/html/body/main/div[2]/div/div[2]/div[2]/h1</msg>
-<status status="PASS" starttime="20231007 22:33:14.535" endtime="20231007 22:33:14.537"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${referenceReceived}</var>
-<arg>${referenceName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:14.622" level="INFO">${referenceReceived} = Palvelut</msg>
-<status status="PASS" starttime="20231007 22:33:14.537" endtime="20231007 22:33:14.623"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${index}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231007 22:33:14.626" level="INFO">10</msg>
-<status status="PASS" starttime="20231007 22:33:14.624" endtime="20231007 22:33:14.627"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Should Contain</arg>
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${referenceReceived}</arg>
-<arg>${receivedName}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<msg timestamp="20231007 22:33:14.632" level="FAIL">'Palvelut' does not contain 'Kampanjat'</msg>
-<status status="FAIL" starttime="20231007 22:33:14.630" endtime="20231007 22:33:14.632"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:14.628" endtime="20231007 22:33:14.633"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:13.150" endtime="20231007 22:33:14.634"/>
-</iter>
-<status status="FAIL" starttime="20231007 22:32:44.447" endtime="20231007 22:33:14.636"/>
-</for>
-<status status="FAIL" starttime="20231007 22:32:32.447" endtime="20231007 22:33:14.639">Several failures occurred:
-
-1) 'Jäähdytys- ja erikoistuotteet' does not contain 'Erikoistuotteet'
-
-2) 'Palvelut' does not contain 'Kampanjat'</status>
-</test>
-<test id="s1-t2" name="2.ps5 keyword search" line="36">
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231007 22:33:14.654" endtime="20231007 22:33:14.676"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>name:q</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:14.682" level="INFO">Clicking element 'name:q'.</msg>
-<status status="PASS" starttime="20231007 22:33:14.678" endtime="20231007 22:33:15.035"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:q</arg>
-<arg>ps5</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:15.043" level="INFO">Typing text 'ps5' into text field 'name:q'.</msg>
-<status status="PASS" starttime="20231007 22:33:15.039" endtime="20231007 22:33:15.456"/>
-</kw>
-<kw name="Press Key" library="SeleniumLibrary">
-<arg>name:q</arg>
-<arg>\\13</arg>
-<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
-<msg timestamp="20231007 22:33:15.463" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
-<status status="PASS" starttime="20231007 22:33:15.461" endtime="20231007 22:33:15.747"/>
-</kw>
-<kw name="Set Screenshot Directory" library="SeleniumLibrary">
-<arg>C:\\Users\\vikiv\\Desktop\\1st module\\st\\Robot\\PROJECT</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20231007 22:33:15.753" endtime="20231007 22:33:15.760"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:17.770" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231007 22:33:15.767" endtime="20231007 22:33:17.771"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[1]/a/div/img</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20231007 22:33:18.182" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../st/Robot/PROJECT/selenium-element-screenshot-19.png"&gt;&lt;img src="../st/Robot/PROJECT/selenium-element-screenshot-19.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231007 22:33:17.774" endtime="20231007 22:33:18.183"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:18.191" level="INFO">Clicking element 'xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[2]/h5/a/span'.</msg>
-<status status="PASS" starttime="20231007 22:33:18.187" endtime="20231007 22:33:20.112"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:14.649" endtime="20231007 22:33:20.113"/>
-</test>
-<test id="s1-t3" name="3.find link" line="48">
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Lisää koriin</arg>
+<arg>Uusi asiakas</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231007 22:33:20.213" level="INFO">Current page contains text 'Lisää koriin'.</msg>
-<status status="PASS" starttime="20231007 22:33:20.119" endtime="20231007 22:33:20.213"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:20.117" endtime="20231007 22:33:20.215"/>
-</test>
-<test id="s1-t4" name="4.find button for &quot;lisää koriin&quot;" line="50">
-<kw name="Page Should Contain Button" library="SeleniumLibrary">
-<arg>class:btn-icon</arg>
-<doc>Verifies button ``locator`` is found from current page.</doc>
-<msg timestamp="20231007 22:33:20.435" level="INFO">Current page contains button 'class:btn-icon'.</msg>
-<status status="PASS" starttime="20231007 22:33:20.222" endtime="20231007 22:33:20.435"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[2]/div[2]/addto-cart-wrapper/div/a</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20231007 22:33:20.740" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../st/Robot/PROJECT/selenium-element-screenshot-20.png"&gt;&lt;img src="../st/Robot/PROJECT/selenium-element-screenshot-20.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231007 22:33:20.437" endtime="20231007 22:33:20.742"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:20.219" endtime="20231007 22:33:20.745"/>
-</test>
-<test id="s1-t5" name="5.add element to shopping cart" line="53">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[2]/div[2]/addto-cart-wrapper/div/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:20.762" level="INFO">Clicking element 'xpath:/html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[2]/div[2]/addto-cart-wrapper/div/a'.</msg>
-<status status="PASS" starttime="20231007 22:33:20.757" endtime="20231007 22:33:21.046"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:20.754" endtime="20231007 22:33:21.048"/>
-</test>
-<test id="s1-t6" name="extra task1 - payment" line="60">
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:22.063" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:21.060" endtime="20231007 22:33:22.064"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/header/div/div[3]/jim-cart-dropdown/div/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:22.069" level="INFO">Clicking element 'xpath:/html/body/header/div/div[3]/jim-cart-dropdown/div/a'.</msg>
-<status status="PASS" starttime="20231007 22:33:22.067" endtime="20231007 22:33:24.074"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${productPrice}</var>
-<arg>xpath:/html/body/main/div/div/div/div[1]/article/div/div[2]/div/div[3]/div[2]/div/span/span</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:24.176" level="INFO">${productPrice} = 569,90 €</msg>
-<status status="PASS" starttime="20231007 22:33:24.077" endtime="20231007 22:33:24.176"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${totalPrice}</var>
-<arg>xpath:/html/body/main/div/div/div/div[2]/div/div[1]/ul/li[5]/span</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:24.274" level="INFO">${totalPrice} = 569,90 €</msg>
-<status status="PASS" starttime="20231007 22:33:24.179" endtime="20231007 22:33:24.274"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${productPrice}</arg>
-<arg>${totalPrice}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231007 22:33:24.277" endtime="20231007 22:33:24.280"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div/div/div[2]/div/div[3]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:24.286" level="INFO">Clicking element 'xpath:/html/body/main/div/div/div/div[2]/div/div[3]/a'.</msg>
-<status status="PASS" starttime="20231007 22:33:24.283" endtime="20231007 22:33:25.702"/>
+<msg timestamp="20231009 15:07:48.252" level="INFO">Current page contains text 'Uusi asiakas'.</msg>
+<status status="PASS" starttime="20231009 15:07:48.201" endtime="20231009 15:07:48.253"/>
 </kw>
 <kw name="Select Radio Button" library="SeleniumLibrary">
 <arg>selectedTab</arg>
-<arg>anonymous-tab-input</arg>
+<arg>private-tab-input</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20231007 22:33:25.705" level="INFO">Selecting 'anonymous-tab-input' from radio button 'selectedTab'.</msg>
-<status status="PASS" starttime="20231007 22:33:25.704" endtime="20231007 22:33:25.863"/>
+<msg timestamp="20231009 15:07:48.258" level="INFO">Selecting 'private-tab-input' from radio button 'selectedTab'.</msg>
+<status status="PASS" starttime="20231009 15:07:48.257" endtime="20231009 15:07:48.438"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div/div/div[2]/div[4]/div/div/form/input[3]</arg>
+<arg>name:EmailAddress</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:25.866" level="INFO">Clicking element 'xpath:/html/body/main/div/div/div/div[2]/div[4]/div/div/form/input[3]'.</msg>
-<status status="PASS" starttime="20231007 22:33:25.865" endtime="20231007 22:33:26.835"/>
+<msg timestamp="20231009 15:07:48.441" level="INFO">Clicking element 'name:EmailAddress'.</msg>
+<status status="PASS" starttime="20231009 15:07:48.440" endtime="20231009 15:07:48.576"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:EmailAddress</arg>
+<arg>mike.hunt@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231009 15:07:48.578" level="INFO">Typing text 'mike.hunt@gmail.com' into text field 'name:EmailAddress'.</msg>
+<status status="PASS" starttime="20231009 15:07:48.577" endtime="20231009 15:07:48.840"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:27.840" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:26.838" endtime="20231007 22:33:27.841"/>
+<msg timestamp="20231009 15:07:49.842" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231009 15:07:48.841" endtime="20231009 15:07:49.844"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Toimitusosoite</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231007 22:33:27.910" level="INFO">Current page contains text 'Toimitusosoite'.</msg>
-<status status="PASS" starttime="20231007 22:33:27.842" endtime="20231007 22:33:27.910"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231009 15:07:49.852" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20231009 15:07:49.848" endtime="20231009 15:07:50.130"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input</arg>
+<arg>test1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231009 15:07:50.139" level="INFO">Typing text 'test1' into text field 'xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20231009 15:07:50.133" endtime="20231009 15:07:50.479"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231009 15:07:50.485" level="INFO">Clicking element 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20231009 15:07:50.482" endtime="20231009 15:07:50.727"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>test1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231009 15:07:50.734" level="INFO">Typing text 'test1' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20231009 15:07:50.730" endtime="20231009 15:07:51.063"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:FirstName</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:27.915" level="INFO">Clicking element 'name:FirstName'.</msg>
-<status status="PASS" starttime="20231007 22:33:27.913" endtime="20231007 22:33:28.099"/>
+<msg timestamp="20231009 15:07:51.069" level="INFO">Clicking element 'name:FirstName'.</msg>
+<status status="PASS" starttime="20231009 15:07:51.066" endtime="20231009 15:07:51.330"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:FirstName</arg>
 <arg>Mike</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:28.106" level="INFO">Typing text 'Mike' into text field 'name:FirstName'.</msg>
-<status status="PASS" starttime="20231007 22:33:28.102" endtime="20231007 22:33:28.373"/>
+<msg timestamp="20231009 15:07:51.338" level="INFO">Typing text 'Mike' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20231009 15:07:51.335" endtime="20231009 15:07:51.648"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:LastName</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:28.376" level="INFO">Clicking element 'name:LastName'.</msg>
-<status status="PASS" starttime="20231007 22:33:28.374" endtime="20231007 22:33:28.525"/>
+<msg timestamp="20231009 15:07:51.655" level="INFO">Clicking element 'name:LastName'.</msg>
+<status status="PASS" starttime="20231009 15:07:51.651" endtime="20231009 15:07:51.982"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:LastName</arg>
 <arg>Hunt</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:28.528" level="INFO">Typing text 'Hunt' into text field 'name:LastName'.</msg>
-<status status="PASS" starttime="20231007 22:33:28.526" endtime="20231007 22:33:28.704"/>
+<msg timestamp="20231009 15:07:52.043" level="INFO">Typing text 'Hunt' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20231009 15:07:52.038" endtime="20231009 15:07:52.266"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:Address</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:28.707" level="INFO">Clicking element 'name:Address'.</msg>
-<status status="PASS" starttime="20231007 22:33:28.705" endtime="20231007 22:33:28.843"/>
+<msg timestamp="20231009 15:07:52.273" level="INFO">Clicking element 'name:Address'.</msg>
+<msg timestamp="20231009 15:07:53.818" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231009 15:07:53.818" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (759, 743)
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7811D7D32+55474]
+	(No symbol) [0x00007FF7811477E2]
+	(No symbol) [0x00007FF780FFE0EB]
+	(No symbol) [0x00007FF781044E7B]
+	(No symbol) [0x00007FF781043249]
+	(No symbol) [0x00007FF781041018]
+	(No symbol) [0x00007FF7810400D3]
+	(No symbol) [0x00007FF781035DCF]
+	(No symbol) [0x00007FF78105F15A]
+	(No symbol) [0x00007FF7810356E6]
+	(No symbol) [0x00007FF78105F370]
+	(No symbol) [0x00007FF781077EF2]
+	(No symbol) [0x00007FF78105EF33]
+	(No symbol) [0x00007FF781033D41]
+	(No symbol) [0x00007FF781034F84]
+	GetHandleVerifier [0x00007FF78153B772+3609330]
+	GetHandleVerifier [0x00007FF781591A90+3962384]
+	GetHandleVerifier [0x00007FF781589F1F+3930783]
+	GetHandleVerifier [0x00007FF781273CC6+694342]
+	(No symbol) [0x00007FF781152238]
+	(No symbol) [0x00007FF78114E4A4]
+	(No symbol) [0x00007FF78114E5D2]
+	(No symbol) [0x00007FF78113EE33]
+	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
+	RtlUserThreadStart [0x00007FFECAEE485B+43]
+</msg>
+<status status="FAIL" starttime="20231009 15:07:52.269" endtime="20231009 15:07:53.833"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:Address</arg>
-<arg>Locastreet 23</arg>
+<arg>Locaville 420</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:28.847" level="INFO">Typing text 'Locastreet 23' into text field 'name:Address'.</msg>
-<status status="PASS" starttime="20231007 22:33:28.845" endtime="20231007 22:33:29.037"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.835" endtime="20231009 15:07:53.835"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:PostalCode</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:29.041" level="INFO">Clicking element 'name:PostalCode'.</msg>
-<status status="PASS" starttime="20231007 22:33:29.038" endtime="20231007 22:33:29.148"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.837" endtime="20231009 15:07:53.837"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:PostalCode</arg>
-<arg>13100</arg>
+<arg>420</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:29.152" level="INFO">Typing text '13100' into text field 'name:PostalCode'.</msg>
-<status status="PASS" starttime="20231007 22:33:29.150" endtime="20231007 22:33:29.401"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.839" endtime="20231009 15:07:53.839"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:City</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:29.406" level="INFO">Clicking element 'name:City'.</msg>
-<status status="PASS" starttime="20231007 22:33:29.403" endtime="20231007 22:33:29.632"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.840" endtime="20231009 15:07:53.841"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:City</arg>
 <arg>Locaville</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:29.641" level="INFO">Typing text 'Locaville' into text field 'name:City'.</msg>
-<status status="PASS" starttime="20231007 22:33:29.635" endtime="20231007 22:33:29.943"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>name:EmailAddress</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:29.948" level="INFO">Clicking element 'name:EmailAddress'.</msg>
-<status status="PASS" starttime="20231007 22:33:29.945" endtime="20231007 22:33:30.181"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:EmailAddress</arg>
-<arg>mike.hunt@student.hamk.fi</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:30.188" level="INFO">Typing text 'mike.hunt@student.hamk.fi' into text field 'name:EmailAddress'.</msg>
-<status status="PASS" starttime="20231007 22:33:30.184" endtime="20231007 22:33:30.622"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.842" endtime="20231009 15:07:53.843"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:Phone</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:30.628" level="INFO">Clicking element 'name:Phone'.</msg>
-<status status="PASS" starttime="20231007 22:33:30.625" endtime="20231007 22:33:30.847"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.844" endtime="20231009 15:07:53.844"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:Phone</arg>
 <arg>+358403456789</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:30.853" level="INFO">Typing text '+358403456789' into text field 'name:Phone'.</msg>
-<status status="PASS" starttime="20231007 22:33:30.848" endtime="20231007 22:33:31.225"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.849" endtime="20231009 15:07:53.849"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/form/div/div[6]/input</arg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:31.232" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div/div[1]/form/div/div[6]/input'.</msg>
-<status status="PASS" starttime="20231007 22:33:31.228" endtime="20231007 22:33:31.469"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Scroll Element Into View</arg>
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/form/div/input</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/form/div/input</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<msg timestamp="20231007 22:33:32.236" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../st/Robot/PROJECT/selenium-screenshot-85.png"&gt;&lt;img src="../st/Robot/PROJECT/selenium-screenshot-85.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231007 22:33:32.236" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
-  (Session info: chrome=117.0.5938.134)
-Stacktrace:
-	GetHandleVerifier [0x00007FF714D57D32+55474]
-	(No symbol) [0x00007FF714CC77E2]
-	(No symbol) [0x00007FF714B7DF9D]
-	(No symbol) [0x00007FF714C00585]
-	(No symbol) [0x00007FF714BDF15A]
-	(No symbol) [0x00007FF714BF7EF2]
-	(No symbol) [0x00007FF714BDEF33]
-	(No symbol) [0x00007FF714BB3D41]
-	(No symbol) [0x00007FF714BB4F84]
-	GetHandleVerifier [0x00007FF7150BB772+3609330]
-	GetHandleVerifier [0x00007FF715111A90+3962384]
-	GetHandleVerifier [0x00007FF715109F1F+3930783]
-	GetHandleVerifier [0x00007FF714DF3CC6+694342]
-	(No symbol) [0x00007FF714CD2238]
-	(No symbol) [0x00007FF714CCE4A4]
-	(No symbol) [0x00007FF714CCE5D2]
-	(No symbol) [0x00007FF714CBEE33]
-	BaseThreadInitThunk [0x00007FFB002753E0+16]
-	RtlUserThreadStart [0x00007FFB0178485B+43]
-</msg>
-<status status="FAIL" starttime="20231007 22:33:31.475" endtime="20231007 22:33:32.245"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:31.473" endtime="20231007 22:33:32.246"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/form/div/input</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20231007 22:33:32.247" endtime="20231007 22:33:32.277"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:33.279" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:32.278" endtime="20231007 22:33:33.281"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.851" endtime="20231009 15:07:53.851"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/form/div/input</arg>
+<arg>xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:33.287" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div/div[1]/form/div/input'.</msg>
-<status status="PASS" starttime="20231007 22:33:33.284" endtime="20231007 22:33:33.904"/>
+<status status="NOT RUN" starttime="20231009 15:07:53.852" endtime="20231009 15:07:53.853"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Toimitustapa</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231007 22:33:34.618" level="INFO">Current page contains text 'Toimitustapa'.</msg>
-<status status="PASS" starttime="20231007 22:33:33.908" endtime="20231007 22:33:34.619"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:35.624" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:34.622" endtime="20231007 22:33:35.626"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>DeliveryMethodID</arg>
-<arg>PNP</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20231007 22:33:35.630" level="INFO">Selecting 'PNP' from radio button 'DeliveryMethodID'.</msg>
-<status status="PASS" starttime="20231007 22:33:35.628" endtime="20231007 22:33:35.906"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Scroll Element Into View</arg>
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[1]/div/form/input[2]</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[1]/div/form/input[2]</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<msg timestamp="20231007 22:33:36.457" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../st/Robot/PROJECT/selenium-screenshot-86.png"&gt;&lt;img src="../st/Robot/PROJECT/selenium-screenshot-86.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231007 22:33:36.459" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
-  (Session info: chrome=117.0.5938.134)
+<status status="FAIL" starttime="20231009 15:07:37.542" endtime="20231009 15:07:53.854">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (759, 743)
+  (Session info: chrome=117.0.5938.150)
 Stacktrace:
-	GetHandleVerifier [0x00007FF714D57D32+55474]
-	(No symbol) [0x00007FF714CC77E2]
-	(No symbol) [0x00007FF714B7DF9D]
-	(No symbol) [0x00007FF714C00585]
-	(No symbol) [0x00007FF714BDF15A]
-	(No symbol) [0x00007FF714BF7EF2]
-	(No symbol) [0x00007FF714BDEF33]
-	(No symbol) [0x00007FF714BB3D41]
-	(No symbol) [0x00007FF714BB4F84]
-	GetHandleVerifier [0x00007FF7150BB772+3609330]
-	GetHandleVerifier [0x00007FF715111A90+3962384]
-	GetHandleVerifier [0x00007FF715109F1F+3930783]
-	GetHandleVerifier [0x00007FF714DF3CC6+694342]
-	(No symbol) [0x00007FF714CD2238]
-	(No symbol) [0x00007FF714CCE4A4]
-	(No symbol) [0x00007FF714CCE5D2]
-	(No symbol) [0x00007FF714CBEE33]
-	BaseThreadInitThunk [0x00007FFB002753E0+16]
-	RtlUserThreadStart [0x00007FFB0178485B+43]
-</msg>
-<status status="FAIL" starttime="20231007 22:33:35.912" endtime="20231007 22:33:36.463"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:35.909" endtime="20231007 22:33:36.463"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[1]/div/form/input[2]</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20231007 22:33:36.470" endtime="20231007 22:33:36.496"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:37.499" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:36.497" endtime="20231007 22:33:37.499"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[1]/div/form/input[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:37.505" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[1]/div/form/input[2]'.</msg>
-<status status="PASS" starttime="20231007 22:33:37.502" endtime="20231007 22:33:39.327"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Noutopiste</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231007 22:33:39.434" level="INFO">Current page contains text 'Noutopiste'.</msg>
-<status status="PASS" starttime="20231007 22:33:39.328" endtime="20231007 22:33:39.435"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:40.437" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:39.436" endtime="20231007 22:33:40.438"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>PickupPointID</arg>
-<arg>PickupPointID_131003200</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20231007 22:33:40.442" level="INFO">Selecting 'PickupPointID_131003200' from radio button 'PickupPointID'.</msg>
-<status status="PASS" starttime="20231007 22:33:40.441" endtime="20231007 22:33:40.716"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:41.721" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:40.718" endtime="20231007 22:33:41.722"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Scroll Element Into View</arg>
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/div/form/div[2]/input</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/div/form/div[2]/input</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<msg timestamp="20231007 22:33:42.247" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../st/Robot/PROJECT/selenium-screenshot-87.png"&gt;&lt;img src="../st/Robot/PROJECT/selenium-screenshot-87.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231007 22:33:42.248" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
-  (Session info: chrome=117.0.5938.134)
-Stacktrace:
-	GetHandleVerifier [0x00007FF714D57D32+55474]
-	(No symbol) [0x00007FF714CC77E2]
-	(No symbol) [0x00007FF714B7DF9D]
-	(No symbol) [0x00007FF714C00585]
-	(No symbol) [0x00007FF714BDF15A]
-	(No symbol) [0x00007FF714BF7EF2]
-	(No symbol) [0x00007FF714BDEF33]
-	(No symbol) [0x00007FF714BB3D41]
-	(No symbol) [0x00007FF714BB4F84]
-	GetHandleVerifier [0x00007FF7150BB772+3609330]
-	GetHandleVerifier [0x00007FF715111A90+3962384]
-	GetHandleVerifier [0x00007FF715109F1F+3930783]
-	GetHandleVerifier [0x00007FF714DF3CC6+694342]
-	(No symbol) [0x00007FF714CD2238]
-	(No symbol) [0x00007FF714CCE4A4]
-	(No symbol) [0x00007FF714CCE5D2]
-	(No symbol) [0x00007FF714CBEE33]
-	BaseThreadInitThunk [0x00007FFB002753E0+16]
-	RtlUserThreadStart [0x00007FFB0178485B+43]
-</msg>
-<status status="FAIL" starttime="20231007 22:33:41.727" endtime="20231007 22:33:42.251"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:41.725" endtime="20231007 22:33:42.252"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/div/form/div[2]/input</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20231007 22:33:42.253" endtime="20231007 22:33:42.276"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:43.280" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:42.279" endtime="20231007 22:33:43.281"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/div/form/div[2]/input</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:43.287" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/div/form/div[2]/input'.</msg>
-<status status="PASS" starttime="20231007 22:33:43.285" endtime="20231007 22:33:45.181"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Maksutapa</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231007 22:33:45.293" level="INFO">Current page contains text 'Maksutapa'.</msg>
-<status status="PASS" starttime="20231007 22:33:45.185" endtime="20231007 22:33:45.294"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>PaymentMethodID</arg>
-<arg>OPEPO</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20231007 22:33:45.298" level="INFO">Selecting 'OPEPO' from radio button 'PaymentMethodID'.</msg>
-<status status="PASS" starttime="20231007 22:33:45.296" endtime="20231007 22:33:45.611"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Scroll Element Into View</arg>
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/form/input[2]</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/form/input[2]</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20231007 22:33:45.616" endtime="20231007 22:33:45.990"/>
-</kw>
-<status status="PASS" starttime="20231007 22:33:45.614" endtime="20231007 22:33:45.991"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/form/input[2]</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20231007 22:33:45.994" endtime="20231007 22:33:46.043"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:47.049" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:46.046" endtime="20231007 22:33:47.050"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/form/input[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231007 22:33:47.057" level="INFO">Clicking element 'xpath:/html/body/main/div/div[2]/div/div[1]/div/div/div[2]/div/form/input[2]'.</msg>
-<status status="PASS" starttime="20231007 22:33:47.054" endtime="20231007 22:33:48.829"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231007 22:33:49.833" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231007 22:33:48.831" endtime="20231007 22:33:49.834"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Tilauksen vahvistus</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231007 22:33:49.939" level="INFO">Current page contains text 'Tilauksen vahvistus'.</msg>
-<status status="PASS" starttime="20231007 22:33:49.836" endtime="20231007 22:33:49.940"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:33:21.056" endtime="20231007 22:33:49.943">Several failures occurred:
-
-1) MoveTargetOutOfBoundsException: Message: move target out of bounds
-  (Session info: chrome=117.0.5938.134)
-Stacktrace:
-	GetHandleVerifier [0x00007FF714D57D32+55474]
-	(No symbol) [0x00007FF714CC77E2]
-	(No symbol) [0x00007FF714B7DF9D]
-	(No symbol) [0x00007FF714C00585]
-	(No symbol) [0x00007FF714BDF15A]
-	(No symbol) [0x00007FF714BF7EF2]
-	(No symbol) [0x00007FF714BDEF33]
-	(No symbol) [0x00007FF714BB3D41]
-	(No symbol) [0x00007FF714BB4F84]
-	GetHandleVerifier [0x00007FF7150BB772+3609330]
-	GetHandleVerifier [0x00007FF715111A90+3962384]
-	GetHandleVerifier [0x00007FF715109F1F+3930783]
-	GetHandleVerifier [0x00007FF714DF3CC6+694342]
-	(No symbol) [0x00007FF714CD2238]
-	(No symbol) [0x00007FF714CCE4A4]
-    [ Message content over the limit has been removed. ]
-Stacktrace:
-	GetHandleVerifier [0x00007FF714D57D32+55474]
-	(No symbol) [0x00007FF714CC77E2]
-	(No symbol) [0x00007FF714B7DF9D]
-	(No symbol) [0x00007FF714C00585]
-	(No symbol) [0x00007FF714BDF15A]
-	(No symbol) [0x00007FF714BF7EF2]
-	(No symbol) [0x00007FF714BDEF33]
-	(No symbol) [0x00007FF714BB3D41]
-	(No symbol) [0x00007FF714BB4F84]
-	GetHandleVerifier [0x00007FF7150BB772+3609330]
-	GetHandleVerifier [0x00007FF715111A90+3962384]
-	GetHandleVerifier [0x00007FF715109F1F+3930783]
-	GetHandleVerifier [0x00007FF714DF3CC6+694342]
-	(No symbol) [0x00007FF714CD2238]
-	(No symbol) [0x00007FF714CCE4A4]
-	(No symbol) [0x00007FF714CCE5D2]
-	(No symbol) [0x00007FF714CBEE33]
-	BaseThreadInitThunk [0x00007FFB002753E0+16]
-	RtlUserThreadStart [0x00007FFB0178485B+43]</status>
+	GetHandleVerifier [0x00007FF7811D7D32+55474]
+	(No symbol) [0x00007FF7811477E2]
+	(No symbol) [0x00007FF780FFE0EB]
+	(No symbol) [0x00007FF781044E7B]
+	(No symbol) [0x00007FF781043249]
+	(No symbol) [0x00007FF781041018]
+	(No symbol) [0x00007FF7810400D3]
+	(No symbol) [0x00007FF781035DCF]
+	(No symbol) [0x00007FF78105F15A]
+	(No symbol) [0x00007FF7810356E6]
+	(No symbol) [0x00007FF78105F370]
+	(No symbol) [0x00007FF781077EF2]
+	(No symbol) [0x00007FF78105EF33]
+	(No symbol) [0x00007FF781033D41]
+	(No symbol) [0x00007FF781034F84]
+	GetHandleVerifier [0x00007FF78153B772+3609330]
+	GetHandleVerifier [0x00007FF781591A90+3962384]
+	GetHandleVerifier [0x00007FF781589F1F+3930783]
+	GetHandleVerifier [0x00007FF781273CC6+694342]
+	(No symbol) [0x00007FF781152238]
+	(No symbol) [0x00007FF78114E4A4]
+	(No symbol) [0x00007FF78114E5D2]
+	(No symbol) [0x00007FF78113EE33]
+	BaseThreadInitThunk [0x00007FFEC9D053E0+16]
+	RtlUserThreadStart [0x00007FFECAEE485B+43]
+</status>
 </test>
-<status status="FAIL" starttime="20231007 22:32:31.429" endtime="20231007 22:33:49.974"/>
+<status status="FAIL" starttime="20231009 15:07:36.945" endtime="20231009 15:07:53.866"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="2" skip="0" id="s1" name="Project">Project</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Project">Project</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231007 22:33:15.463" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
 </errors>
 </robot>

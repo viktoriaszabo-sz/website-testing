@@ -34,7 +34,6 @@ Library    String
 
 # ------------------------- THIS PART DEFINITELY WORKS --------------------------------
 2.ps5 keyword search
-    Maximize Browser Window
     Click Element    name:q
     Input Text    name:q    ps5
     Press Key  name:q  \\13  # Simulate pressing Enter key in the input field with id 'username'
@@ -53,9 +52,7 @@ Library    String
 5.add element to shopping cart    
     Click Element    xpath:/html/body/main/div[1]/div[2]/div/jim-product-cta-box/div/div[2]/div[2]/addto-cart-wrapper/div/a
 
-# ------------------------- THIS PART DEFINITELY WORKS --------------------------------
-
-
+# ---------------------------------------------- THIS PART DEFINITELY WORKS --------------------------------------------------------------------------------------------------------------
 
 extra task1 - payment
     Sleep    1
@@ -117,4 +114,36 @@ extra task1 - payment
     
     Sleep    1
     Page Should Contain    Tilauksen vahvistus
-# --------------------------  should fail on multiple parts, because the scrolling cant go through without failing :/ ------------------------------------------
+# --------------------------  should fail on multiple parts, because the scrolling cant go through without failing :/ -------------------------------------------------------------
+
+extra task2 - register
+    Open Browser    http://jimms.fi     
+    ...    Chrome    options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    Sleep    1
+    Click Element    xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a
+    Reload Page
+    Page Should Contain    Uusi asiakas
+    Select Radio Button    selectedTab    private-tab-input
+    Click Element    name:EmailAddress   
+    Input Text    name:EmailAddress    mike.hunt@gmail.com
+    Sleep    1
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input
+    Input Text    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input    test1
+    Click Element    name:ConfirmPassword
+    Input Text    name:ConfirmPassword    test1
+
+    Click Element    name:FirstName
+    Input Text    name:FirstName    Mike
+    Click Element    name:LastName
+    Input Text    name:LastName    Hunt
+    Click Element    name:Address
+    Input Text    name:Address    Locaville 420
+    Click Element    name:PostalCode
+    Input Text    name:PostalCode    420
+    Click Element    name:City
+    Input Text    name:City    Locaville
+    Click Element    name:Phone
+    Input Text    name:Phone    +358403456789
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input
