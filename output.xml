@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231011 14:30:15.759" rpa="false" schemaversion="4">
+<suite id="s1" name="Project" source="c:\website-testing\project\project.robot">
+<test id="s1-t1" name="Select a product" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://jimms.fi</arg>
+<arg>Chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231011 14:30:16.137" level="INFO">Opening browser 'Chrome' to base url 'http://jimms.fi'.</msg>
+<status status="PASS" starttime="20231011 14:30:16.135" endtime="20231011 14:30:20.456"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231011 14:30:20.456" endtime="20231011 14:30:20.949"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Oheislaitteet</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231011 14:30:21.131" level="INFO">Current page contains text 'Oheislaitteet'.</msg>
+<status status="PASS" starttime="20231011 14:30:20.949" endtime="20231011 14:30:21.135"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:q</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231011 14:30:21.137" level="INFO">Clicking element 'name:q'.</msg>
+<status status="PASS" starttime="20231011 14:30:21.135" endtime="20231011 14:30:21.436"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>Logitech kuulokkeet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231011 14:30:21.439" level="INFO">Typing text 'Logitech kuulokkeet' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20231011 14:30:21.438" endtime="20231011 14:30:21.723"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>\\13</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20231011 14:30:21.725" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20231011 14:30:21.723" endtime="20231011 14:30:22.044"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231011 14:30:23.049" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231011 14:30:22.047" endtime="20231011 14:30:23.049"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[3]/addto-cart-wrapper/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231011 14:30:23.051" level="INFO">Clicking element 'xpath:/html/body/main/div[2]/div/div[2]/div[5]/div/div[1]/product-box/div[2]/div[3]/addto-cart-wrapper/div/a'.</msg>
+<status status="PASS" starttime="20231011 14:30:23.050" endtime="20231011 14:30:23.188"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231011 14:30:24.188" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231011 14:30:23.188" endtime="20231011 14:30:24.188"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/div/div[3]/jim-cart-dropdown/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231011 14:30:24.194" level="INFO">Clicking element 'xpath:/html/body/header/div/div[3]/jim-cart-dropdown/div/a'.</msg>
+<status status="PASS" starttime="20231011 14:30:24.190" endtime="20231011 14:30:24.980"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231011 14:30:25.984" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231011 14:30:24.980" endtime="20231011 14:30:25.984"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div/div/div[1]/article/div/div[2]/div/div[1]/div/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231011 14:30:25.986" level="INFO">Clicking element 'xpath:/html/body/main/div/div/div/div[1]/article/div/div[2]/div/div[1]/div/i'.</msg>
+<status status="PASS" starttime="20231011 14:30:25.984" endtime="20231011 14:30:26.117"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231011 14:30:27.119" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231011 14:30:26.118" endtime="20231011 14:30:27.119"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231011 14:30:27.119" level="INFO">Clicking element 'xpath:/html/body/main/div/div/a'.</msg>
+<status status="PASS" starttime="20231011 14:30:27.119" endtime="20231011 14:30:27.791"/>
+</kw>
+<status status="PASS" starttime="20231011 14:30:16.135" endtime="20231011 14:30:27.795"/>
+</test>
+<status status="PASS" starttime="20231011 14:30:15.768" endtime="20231011 14:30:27.796"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Project">Project</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231011 14:30:21.725" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+</errors>
+</robot>
