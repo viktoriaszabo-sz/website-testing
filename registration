@@ -1,0 +1,34 @@
+*** Test Cases ***
+Registration - test should fail
+    Open Browser    http://jimms.fi     
+    ...    Chrome    options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    Sleep    1
+    Click Element    xpath:/html/body/header/div/div[3]/jim-customer-dropdown-nav/div/div/a
+    Reload Page
+    Page Should Contain    Uusi asiakas
+    Select Radio Button    selectedTab    private-tab-input
+    Click Element    name:EmailAddress   
+    Input Text    name:EmailAddress    mike.hunt@gmail.com
+    Sleep    1
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input
+    Input Text    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[2]/input    test123
+    Click Element    name:ConfirmPassword
+    Input Text    name:ConfirmPassword    test123
+
+    Click Element    name:FirstName
+    Input Text    name:FirstName    Mike
+    Click Element    name:LastName
+    Input Text    name:LastName    Hunt
+    Click Element    name:Address
+    Input Text    name:Address    Locaville 420
+    Click Element    name:PostalCode
+    Input Text    name:PostalCode    420
+    Click Element    name:City
+    Input Text    name:City    Locaville
+    Click Element    name:Phone
+    Input Text    name:Phone    +358403456789
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[8]/div/input
+    Click Element    xpath:/html/body/main/div/div[2]/div[2]/div/div/div/form/div[9]/input
+
+    Page Should Not Contain    Virheellinen postinumero     #Invalid postal code    #test will fail
