@@ -1,3 +1,8 @@
+#    Keita Brudere
+#    Veronika Jadrná
+#    Sara-Sofia Paananen
+#    Viktória Szabó 
+
 *** Settings ***
 Library    SeleniumLibrary
 Library    BuiltIn
